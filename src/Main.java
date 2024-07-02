@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
     //Задача 1
+        //установим переменную, отвечающую за тип ОС клиента
         int clientOS =  1;
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
@@ -8,13 +9,19 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         //Задача 2
+        //Добавим условие о годе выпуска устройства клиента, соединим оба пункта
         int clientDeviceYear = 2015;
         if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+                    System.out.println("Установите версию приложения для Android по ссылке");
         }
         //Задача 3
+        //Составим уравнение, решающее, високосный ли заданный год, или нет
         int year = 2000;
         if (year <= 1584) {
             System.out.println("Високосные года еще не введены!");
@@ -22,8 +29,9 @@ public class Main {
             System.out.println(year + " год является високосным");
         } else {
                 System.out.println(year + " год не является високосным");
-            }
+        }
         //Задача 4
+        //Задача на эффективный радиус доставки и время, затрачиваемое на неё
         int deliveryDistance = 95;
         short deliveryDuration = 1;
         if (deliveryDistance <= 20) {
@@ -36,6 +44,7 @@ public class Main {
             System.out.println("Свыше 100 км доставки нет.");
         }
         //Задача 5
+        //Применим функцию switch для сопоставления номера месяца в году и времени года
         short monthNumber = 12;
         switch (monthNumber) {
             case 1:
@@ -60,7 +69,6 @@ public class Main {
                 break;
             default:
                 System.out.println("Некорректный номер месяца");
-
         }
     }
 }
